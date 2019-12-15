@@ -1,8 +1,8 @@
 # 68
 
-Try to pull request to cooperation in math modeling as a team!
+Try to fork and pull request to cooperation in math modeling as a team!
 
-Download directly `pdf` in release page.
+Download `pdf` directly in release page.
 
 ## Independent ##
 
