@@ -1,7 +1,8 @@
 # 68
-68
 
-Try to pull request to cooperation in a team!
+Try to pull request to cooperation in math modeling as a team!
+
+Download directly `pdf` in release page.
 
 ## Independent ##
 
@@ -44,16 +45,21 @@ Or you cannot see the right result on code rendering.
 ## Code Style ##
 
 indent: tab(8-bit)
+
 file encoding: utf-8
+
 file format: dos(use `<LF><CR>`), unix(use `<CR>`)
 
-table filetype: csv
+## File Type ##
 
-**don't recommend xls and xlsx**
+table file type: `csv`
 
-figure filetype: png(shotsnap), jpg(web download), pdf(draw), ai(draw), eps(draw)
+**don't recommend `xls` and `xlsx`**
 
-**don't recommend bmp**
+figure file type: `png`(shotsnap), `jpg`(web download), `pdf`(draw), `ai`(draw),
+eps(draw)
 
-reference filetype: bib
+**don't recommend `bmp`**
+
+reference file type: `bib`
 
