@@ -292,12 +292,43 @@ rotated factors are very close to 0.9.
 	\label{fig:Result1}
 \end{figure}
 
+Figure \ref{fig:Result1} show that the data source is based on a questionnaire
+survey from the academic research center of a university. Because there are a
+lot of data with missing values, it will affect the distribution of the overall
+variable. So in this process we filter out some missing values and follow After
+processing the data, a 238 rows and 10 columns DataFrame table was obtained. The
+table serves as a quantitative criterion for evaluating a doctoral student,
+including whether it is gender, Is a freshman, Whether to start the question on
+time, Undergraduate school level, Number of students supervised by instructor,
+Average grades for degree courses, Number of SCI articles published in three
+years of enrollment, Number of SCI articles published within 4 years of
+enrollment, Number of EI articles published three years after enrollment, Total
+articles published in admissions. In order to analyze the distribution of data,
+we calculate some basic characteristics of the data set, including min, max, std
+and other attributes.
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width = 0.8\linewidth]{tab2.jpg}
 	\caption{Result2}
 	\label{fig:Result2}
 \end{figure}
+
+As figure \ref{fig:Result2}, we use the relationship between the factor
+scores to successfully calculate the factor scores of the Ph.D. in three years,
+and obtain the minimum factor score corresponding to the actual extension, and
+use this value to determine whether the doctoral students can graduate normally.
+In this case, because the data we collected are all data one year before
+graduation, the implementation of the model may change due to changes in the
+specific policies of the school, so this model has limitations, but it is
+sufficient to roughly judge whether it is a certain period of time. The result
+of being able to graduate on time.
+
+According to statistical analysis, we can conclude that when the factor score is
+greater than 99.017585, we must graduate on time. When the factor score is less
+than 78.173158, the possibility of postponing graduation will greatly increase.
+When in between, it should be noted that the possibility of delay will greatly
+increase.
 
 \begin{figure}[htbp]
 	\centering
@@ -318,22 +349,61 @@ rotated factors are very close to 0.9.
 	\label{fig:Delay Time}
 \end{figure}
 
+We can see from the data set that there are three types of classification
+attributes, namely gender, the level of the undergraduate school, whether it is
+a freshman, and whether the question is opened on time. According to my own
+understanding of the whole problem, so I made a corresponding pivot table to
+provide more relevant information about the data. We can also provide more input
+data sources for our factor analysis based on this pivot table, and more Data
+combination form.
+
 \section{Evaluate of the Mode}%
 \label{sec:Evaluate of the Mode}
 
 \subsection{Strengths}%
 \label{sub:Strengths}
 
-\subsubsection{Robustness}%
-\label{ssub:Robustness}
+Factor analysis is an extension of multiple regression analysis, including some
+modifications that make the approach less likely to be influenced by the
+personal biases of the researcher, and less dependent on the assumption of
+independence among variables. Technical explanations of factor analysis at
+various levels of difficulty can be found in the books by Norušis (1994), Kline
+(1994), Yotopoulos and Nugent (1976), and Mulaik (1974).
 
-The model is reliable and robust. Even if there is a certain deviation in the
-data, the predicted results will not be less than the demand of the data.
+Ideally, in multiple regression analysis, one would observe a dependent variable
+on the left hand side of an equation that is “explained” by a set of independent
+variables on the right hand side. The problem, however, is that the connecting
+link between dependent and independent variables needs a strong theoretical
+basis. Furthermore, many of the so called “independent” variables may not really
+be independent at all, but rather change or move together in response to some
+other unknown variables or “factors.” Hence the researcher usually encounters
+criticism of both the proposed theoretical framework and the method of
+untangling the mutual dependence among the presumably independent variables.
 
-\subsubsection{Accuracy}%
-\label{ssub:Accuracy}
+In contrast, factor analysis is used to determine the underlying determinants of
+many variables, without the need to postulate causality. This is especially
+useful because economic and social indicators are closely intertwined, making it
+nearly impossible to find a set of economic and social variables that are not
+correlated in some way. This interdependence makes normal regression analysis
+problematic but, surprisingly, does not adversely affect factor analysis.
 
-The model can get accurate results, and the demand for data is small.
+Factor analysis, then, is a formal mathematical procedure that estimates the
+unobserved independent factors (or components) that characterize the various
+socalled independent variables. Because they can be constructed to be
+independent, the factor estimates (called factor scores) can be used in
+regression analysis to find the correlation between the factors and the
+dependent variable. The dependent variable may or may not be incorporated
+directly into the procedure that estimates the independent factors. If one is
+looking to estimate a missing observation for a dependent variable, such as per
+capita GDP for a particular country (as is the goal of this study) then this
+variable is not made part of the procedure.
+
+The mathematical procedure is less likely to be influenced by the personal
+biases of the researcher because he or she is supposed to include as many
+variables as possible, allowing it to dictate how the variables are grouped
+together into factors. It is also usually found that a much smaller number of
+factors than variables is able to explain most of the variance of any of the
+variables included in the procedure, or later used as a dependent variable.
 
 \subsection{Weaknesses}%
 \label{sub:Weaknesses}
