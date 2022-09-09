@@ -1,4 +1,6 @@
-# 68
+# 2020mcm1
+
+id: 68
 
 Try to fork and pull request to cooperation in math modeling as a team!
 
